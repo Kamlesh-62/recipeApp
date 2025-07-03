@@ -49,7 +49,7 @@ dependencies {
 
 
     //load image
-    implementation(libs.coil)
+    implementation(libs.coil.compose)
 
 
     //composable ViewModel Dependency

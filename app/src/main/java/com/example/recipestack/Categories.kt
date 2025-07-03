@@ -1,6 +1,6 @@
 package com.example.recipestack
 
-data class Categories(
+data class Category(
     val idCategory:String,
     val strCategory: String,
     val strCategoryThumb: String,
@@ -8,5 +8,5 @@ data class Categories(
 )
 
 data  class CategoriesResponse(
-    val categories: List<Categories>
+    val categories: List<Category>
 )
