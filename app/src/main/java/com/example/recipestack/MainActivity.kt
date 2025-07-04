@@ -20,10 +20,11 @@ class MainActivity : ComponentActivity() {
         setContent {
             RecipeStackTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    RecipeScreen(Modifier.padding(innerPadding))
+//                    RecipeScreen(Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
+
 

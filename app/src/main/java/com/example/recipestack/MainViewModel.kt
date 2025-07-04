@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
 
     private val _categoryState = mutableStateOf(RecipeState())
     val categoriesState: State<RecipeState> = _categoryState
@@ -16,16 +16,17 @@ class MainViewModel: ViewModel() {
         fetchCategories()
     }
 
-    private fun fetchCategories(){
+    private fun fetchCategories() {
         viewModelScope.launch {
-            try{
+            try {
                 val response = recipeService.getCategories()
+
                 _categoryState.value = _categoryState.value.copy(
                     loading = false,
                     error = null,
                     list = response.categories
                 )
-            }catch(e: Exception){
+            } catch (e: Exception) {
                 _categoryState.value = _categoryState.value.copy(
                     loading = false,
                     error = "Error While fetching Categories: ${e.message}",

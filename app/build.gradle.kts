@@ -55,6 +55,9 @@ dependencies {
     //composable ViewModel Dependency
     implementation(libs.androidx.lifecycle)
 
+    //importing navigation
+    implementation(libs.androidx.navigation)
+    
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
